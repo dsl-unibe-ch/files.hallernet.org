@@ -1,0 +1,20 @@
+# files.hallernet.org
+
+Legacy file server of the hallerNet platform.
+
+This server was in use in the early phase of hallernet.org as a read-only file server hosting
+
+* IIIF images
+* legacy websites (static php)
+* event materials
+* presentation materials
+* misc materials
+
+Technically, it was set up as a Docker container running on a NAS and offering an Nginx directory listing, prettified with h5ai.
+
+In order to keep shared links alive the service is reinstated in a simplified way as a Github page (sans IIIF images).
+
+
+```
+DSL, pdaengeli, 2024-08-25
+```

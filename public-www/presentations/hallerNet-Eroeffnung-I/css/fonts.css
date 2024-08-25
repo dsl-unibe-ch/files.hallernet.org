@@ -1,0 +1,36 @@
+/* latin */
+@font-face {
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: 400;
+  /*src: local('Calibri'), url(http://fonts.gstatic.com/l/font?kit=VdF1ZYqF-aETvRzg2WdyWALUuEpTyoUstqEm5AMlJo4&skey=a1029226f80653a8&v=v8) format('woff');*/
+  src: local('Calibri'), url(fonts/Calibri.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Calibri-Bold';
+  font-style: normal;
+  font-weight: 700;
+  /*src: local('Calibri Bold'), local('Calibri-Bold'), url(http://fonts.gstatic.com/l/font?kit=cCwcoZCh95jEfkePtzfl973hpw3pgy2gAi-Ip7WPMi0&skey=cd2dd6afe6bf0eb2&v=v8) format('woff');*/
+  src: local('Calibri Bold'), local('Calibri-Bold'), url(fonts/Calibri-Bold.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Calibri-Italic';
+  font-style: italic;
+  font-weight: 400;
+  /*src: local('Calibri Italic'), local('Calibri-Italic'), url(http://fonts.gstatic.com/l/font?kit=s6BJz6dd05IaBkVSZYii2rO3LdcAZYWl9Si6vvxL-qU&skey=36a3d5758e0e2f58&v=v8) format('woff');*/
+  src: local('Calibri Italic'), local('Calibri-Italic'), url(fonts/Calibri-Italic.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+/* latin */
+@font-face {
+  font-family: 'Calibri-BoldItalic';
+  font-style: italic;
+  font-weight: 700;
+  /*src: local('Calibri Bold Italic'), local('Calibri-BoldItalic'), url(http://fonts.gstatic.com/l/font?kit=tglRjQQneep4ISNw_cVZOKRDOzjiPcYnFooOUGCOsRk&skey=8b00183e5f6700b6&v=v8) format('woff');*/
+  src: local('Calibri Bold Italic'), local('Calibri-BoldItalic'), url(fonts/Calibri-BoldItalic.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}

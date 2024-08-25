@@ -1,0 +1,428 @@
+<!--<!DOCTYPE html>-->
+<html>
+  <head>
+    <title>hallerNet — Technische Umsetzung</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="css/fonts.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="vendor/jQuery-Rebox-master/jquery-rebox.css">
+    <script type="text/javascript" src="vendor/jQuery-Rebox-master/lib/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="lib/zepto.min.js"></script> -->
+    <script type="text/javascript" src="vendor/jQuery-Rebox-master/lib/jquery-litelighter.js"></script>
+    <script type="text/javascript" src="vendor/jQuery-Rebox-master/jquery-rebox.js"></script>
+
+    <script type="text/javascript" src="vendor/openseadragon/openseadragon.min.js"></script>
+
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+      @import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,400italic,700italic);
+      @import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+      body { font-family: 'Calibri'; }
+      h1 {
+        font-family: 'Calibri-Bold';
+        font-weight: bold;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        bottom: 50px;
+        z-index: 99;
+      }
+      h2 {
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: #939309;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        top: 40px;
+        z-index: 50;
+      }
+
+      h3 {
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: lightgray;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        top: 140px;
+      }
+
+      h4 {
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: lightgray;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        top: 140px;
+      }
+
+      .contentarea {
+        position: absolute;
+        top: 180px;
+        font-size: 30px;
+        width: 80vw;
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: darkgray;
+      }
+
+      .vw50 {
+        width: 50vw;
+      }
+
+      .vw50a {
+        color: white;
+        position: absolute;
+        left: 55%;
+        width: 38vw;
+        z-index: 40;
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; 
+      font-size:13px;}
+      
+      a:link, a:visited {
+      color: black;
+      text-decoration: none;
+      }
+
+      .jump:hover
+      {
+      z-index:100 !important;
+      }
+
+      .rebox {
+        /*background-color: black; */
+        padding: 5px;
+        color: white;
+      }
+
+      .rebox-caption p {
+        font-size: 20px;
+      }
+
+      .flex-container {
+      /* We first create a flex layout context */
+      display: flex;
+      
+      /* Then we define the flow direction 
+         and if we allow the items to wrap 
+       * Remember this is the same as:
+       * flex-direction: row;
+       * flex-wrap: wrap;
+       */
+      flex-flow: row wrap;
+      
+      /* Then we define how is distributed the remaining space */
+      justify-content: space-around;
+      
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      }
+
+      .flex-item {background-color: #EBEBEB;
+        margin: 20px;padding: 15px;}
+
+    </style>
+
+  </head>
+  <body>
+    <textarea id="source">
+
+name: Titelseite
+class: 
+
+## *hallerNet* — Technische Umsetzung
+
+<img style="position: absolute; bottom:180px; left: 0px; opacity: 1; z-index: 0; width: 100%;" src="images/haller.jpg"/>
+
+<div style="position: absolute; top: 520px; left: 100px;"><p>Ringvorlesung <em>Einblicke in die Digital Humanities</em></p></div>
+
+<div style="position: absolute; top: 520px; right: 200px; text-align: right;"><p>Bern, 15. November 2021</p></div>
+
+
+---
+
+
+## Woher stammen die Daten? 
+
+### Faust Professional
+
+<div id="seadragon-viewer-faust" style="width:100%; height:600px;"></div>
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p><a href="https://images.hallernet.org/iiif/misc/halleronline/persons_excel.tif/full/pct:10/0/default.jpg" target="_blank">https://images.hallernet.org/iiif/misc/halleronline/persons_excel.tif/full/pct:10/0/default.jpg</a></p></div>
+
+---
+
+## <del>Export</del> Report → Excel
+
+<div id="seadragon-viewer-excel" style="width:100%; height:600px;"></div>
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p><a href="https://images.hallernet.org/iiif/misc/halleronline/persons_faust.tif/full/pct:10/0/default.jpg" target="_blank">https://images.hallernet.org/iiif/misc/halleronline/persons_faust.tif/full/pct:10/0/default.jpg</a></p></div>
+
+---
+
+## Datentransformation (XProc, XSLT) — Versionskontrolle — Archivierung
+
+
+<img src="images/xml-tei-gitlab-4.png"
+      class="jump" 
+      style="position: absolute;
+      top: 148px;
+      color: white;
+      left: 568px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg);"
+      title=""/> 
+
+<img src="images/xml-tei-gitlab-3.png"
+      class="jump" 
+      style="position: absolute;
+      top: 108px;
+      color: white;
+      left: 368px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(-15deg);
+      -moz-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+      -o-transform: rotate(-15deg);
+      transform: rotate(-15deg);"
+      title=""/>      
+
+<img src="images/xml-tei-gitlab-2.png"
+      class="jump" 
+      style="position: absolute;
+      top: 148px;
+      color: white;
+      left: 268px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(10deg);
+      -moz-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      -o-transform: rotate(10deg);
+      transform: rotate(10deg);"
+      title=""/>
+
+<img src="images/xml-tei-gitlab-1.png"
+      class="jump" 
+      style="position: absolute;
+      top: 145px;
+      color: white;
+      left: 70px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      transform: rotate(-5deg);"
+      title=""/> 
+
+
+
+---
+
+name: architecture
+background-size: contain
+
+## Architektur / Werkzeuge
+
+
+<ul class="flex-container" style="position:absolute;top:150px;left: 80px;">
+  <li class="flex-item">
+    <h5>Backend</h5>
+    <ul>
+      <li>XML-Pipeline, basierend auf <a href="https://github.com/Armatiek/xslweb" target="_blank">XSLWeb</a></li>
+      <li>Output-Formate
+        <ul>
+          <li>HTML (Zwischen-/Kontrollformat)</li>
+          <li>Solr-XML</li>
+          <li>CMIF (CorrespSearch)</li>
+          <li>JSON</li>
+        </ul>
+     </li>
+   </ul>
+  </li>
+  <li class="flex-item">
+    <h5>Frontend</h5>
+    <ul>
+      <li>JS-Framework</li>
+      <ul>
+        <li><a target="_blank" href="https://vuejs.org/">VueJS</a></li>
+        <li><a target="_blank" href="https://quasar.dev/">Quasar Framework</a></li>
+      </ul>
+    </ul>
+  </li>
+  <li class="flex-item">
+    <h5>Suchindex</h5>
+    <ul>
+      <li>Apache Solr</li>
+    </ul>
+  </li>
+  <li class="flex-item">
+    <h5>Projektdaten</h5>
+    <ul>
+      <li>Dateisystem / Volume auf Server</li>
+      <li>Bearbeitung über WebDAV</li>
+      <li>Versionskontrolle mit Git</li>
+      <li>Organisation in Gitlab</li>
+    </ul>
+  </li>
+  <li class="flex-item">
+    <h5>oXygen-Framework</h5>
+    <ul>
+      <li>Java, JavaScript</li>
+    </ul>
+  </li>
+  <li class="flex-item">
+    <h5>Image-Server</h5>
+    <ul>
+      <li>Gegenwärtig in Transition<br/> (IIPImage auf Projekt-NAS → UB Bern)</li>
+    </ul>
+  </li>
+</ul>
+
+---
+
+
+
+
+## Zentrale Aspekte
+
+<h3>
+  <ul>
+    <li>Modularisierung<br/></li>
+    <li>Daten als <em>first class citizens</em></li>
+  </ul>
+</h3>
+
+
+<!-- 
+
+name: Diskussion
+layout: false
+
+#Vielen Dank für die Aufmerksamkeit
+ -->
+
+    </textarea>
+    
+    <script type="text/javascript">
+    $('#lb1').rebox({ selector: 'a' });
+    </script>
+
+    <!-- <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script> -->
+    <script src="remark/out/remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create(
+            {
+                    // Set the slideshow display ratio
+                    // Default: '4:3'
+                    // Alternatives: '16:9', ...
+                    ratio: '16:9',
+
+                    // Navigation options
+                    navigation: {
+                      // Enable or disable navigating using scroll
+                      // Default: true
+                      // Alternatives: false
+                      scroll: false,
+
+                      // Enable or disable navigation using touch
+                      // Default: true
+                      // Alternatives: false
+                      touch: true,
+
+                      // Enable or disable navigation using click
+                      // Default: false
+                      // Alternatives: true
+                      click: false
+                    },
+
+                    // Customize slide number label, either using a format string..
+                    //slideNumberFormat: 'Slide %current% of %total%',
+                    // .. or by using a format function
+                    //slideNumberFormat: function (current, total) {
+                    //  return 'Slide ' + current + ' of ' + total;
+                    //},
+
+                    // Enable or disable counting of incremental slides in the slide counting
+                    countIncrementalSlides: true
+            });
+    </script>
+
+    <script type="text/javascript">
+      var rect = new OpenSeadragon.Rect(0, 0, 10, 10);
+      var viewer = OpenSeadragon({
+        id: "seadragon-viewer-excel",
+        prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+        tileSources: "https://images.hallernet.org/iiif/misc/halleronline/persons_excel.tif/info.json",
+      });
+
+      viewer.addHandler('open', function() {
+            setTimeout(function() {
+                viewer.viewport.fitBounds(rect);
+            }, 1);
+        });
+    </script>
+
+    <script type="text/javascript">
+      var rect = new OpenSeadragon.Rect(0, 0, 0.5, 1);
+      var viewer = OpenSeadragon({
+        id: "seadragon-viewer-faust",
+        prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+        tileSources: "https://images.hallernet.org/iiif/misc/halleronline/persons_faust.tif/info.json"
+      });
+      viewer.addHandler('open', function() {
+            setTimeout(function() {
+                viewer.viewport.fitBounds(rect);
+            }, 1);
+        });
+    </script>
+
+
+
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('#haller1').rebox(
+          {
+            theme: 'rebox',        // class name parent gets (for your css)
+            selector: 'a',        // the selector to delegate to, should be to the <a> which contains an <img>
+            prev: '&lt;',        // use an image, text, whatever for the previous button
+            next: '&gt;',        // use an image, text, whatever for the next button
+            loading: '%',          // use an image, text, whatever for the loading notification
+            //close: '&times;',      // use an image, text, whatever for the close button
+            //speed: 600,            // speed to fade in or out
+            //zIndex: 1000,          // zIndex to apply to the outer container
+            //cycle: true,           // whether to cycle through galleries or stop at ends
+            //captionAttr: 'title'   // name of the attribute to grab the caption from
+            //template: 'image',     // the default template to be used (see templates below)
+            //templates: {           // define templates to create the elements you need function($item, settings)
+             //   image: function($item, settings, callback){ 
+             //       return $('<img src="'+ $item.attr('href') +'" class="'+ s.theme +'-content" />').load(callback);
+             //       }
+             //   }
+            }
+
+          );
+
+      });
+    </script>
+
+  </body>
+</html>

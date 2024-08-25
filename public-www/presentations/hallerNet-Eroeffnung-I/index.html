@@ -1,0 +1,500 @@
+<!--<!DOCTYPE html>-->
+<html>
+  <head>
+    <title>Editions- und Forschungsplattform hallerNet</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="css/fonts.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="vendor/jQuery-Rebox-master/jquery-rebox.css">
+    <script type="text/javascript" src="vendor/jQuery-Rebox-master/lib/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="lib/zepto.min.js"></script> -->
+    <script type="text/javascript" src="vendor/jQuery-Rebox-master/lib/jquery-litelighter.js"></script>
+    <script type="text/javascript" src="vendor/jQuery-Rebox-master/jquery-rebox.js"></script>
+
+    <script type="text/javascript" src="vendor/openseadragon/openseadragon.min.js"></script>
+
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+      @import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,400italic,700italic);
+      @import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+      body { font-family: 'Calibri'; }
+      h1 {
+        font-family: 'Calibri-Bold';
+        font-weight: bold;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        bottom: 50px;
+        z-index: 99;
+      }
+      h2 {
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: #939309;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        top: 40px;
+        z-index: 50;
+      }
+
+      h3, h4 {
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: lightgray;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        bottom: 140px;
+      }
+
+      .contentarea {
+        position: absolute;
+        top: 180px;
+        font-size: 30px;
+        width: 80vw;
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: darkgray;
+      }
+
+      .vw50 {
+        width: 50vw;
+      }
+
+      .vw50a {
+        color: white;
+        position: absolute;
+        left: 55%;
+        width: 38vw;
+        z-index: 40;
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; 
+      font-size:13px;}
+      
+      a:link, a:visited {
+      color: black;
+      text-decoration: none;
+      }
+
+      .jump:hover
+      {
+      z-index:100 !important;
+      }
+
+      .rebox {
+        /*background-color: black; */
+        padding: 5px;
+        color: white;
+      }
+
+      .rebox-caption p {
+        font-size: 20px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <textarea id="source">
+
+name: Titelseite
+class: 
+
+## Editions- und Forschungsplattform *hallerNet*
+
+<img style="position: absolute; top:180px; left: 0px; opacity: 1; z-index: 0; width: 100%;" src="images/haller.jpg"/>
+
+<div style="position: absolute; top: 420px; left: 100px;">
+
+  <p>Simona Boscani Leoni, Historisches Institut, Universität Bern</p>
+  <p>Peter Dängeli, Cologne Center for eHumanities</p>
+  <p>Christian Forney, Historisches Institut, Universität Bern</p>
+  <p>Martin Stuber, Historisches Institut, Universität Bern</p>
+</div>
+
+<div style="position: absolute; top: 490px; right: 100px; text-align: right;"><p><em>Editions- und Forschungsplattformen zum 18. Jahrhundert<br/> Workshop
+zur Eröffnung von hallerNet</em></p><p>Bern, 8. Mai 2019</p></div>
+
+---
+
+name: Launch-CCeH
+background-image: url(images/Launch-CCeH.png)
+background-size: contain
+
+
+
+---
+
+## Faust Professional
+
+<div id="seadragon-viewer-faust" style="width:100%; height:600px;"></div>
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p><a href="https://images.hallernet.org/iiif/misc/halleronline/persons_excel.tif/full/pct:10/0/default.jpg" target="_blank">https://images.hallernet.org/iiif/misc/halleronline/persons_excel.tif/full/pct:10/0/default.jpg</a></p></div>
+
+---
+
+## Daten statt Worte
+
+<!-- ## Excel to the rescue -->
+
+<div id="seadragon-viewer-excel" style="width:100%; height:600px;"></div>
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p><a href="https://images.hallernet.org/iiif/misc/halleronline/persons_faust.tif/full/pct:10/0/default.jpg" target="_blank">https://images.hallernet.org/iiif/misc/halleronline/persons_faust.tif/full/pct:10/0/default.jpg</a></p></div>
+
+---
+
+## Pipelines, Standards, Kontrolle, Öffnung
+
+
+<img src="images/xml-tei-gitlab-4a.png"
+      class="jump" 
+      style="position: absolute;
+      top: 148px;
+      color: white;
+      left: 568px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg);"
+      title=""/> 
+
+<img src="images/xml-tei-gitlab-3a.png"
+      class="jump" 
+      style="position: absolute;
+      top: 108px;
+      color: white;
+      left: 368px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(-15deg);
+      -moz-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+      -o-transform: rotate(-15deg);
+      transform: rotate(-15deg);"
+      title=""/>      
+
+<img src="images/xml-tei-gitlab-2a.png"
+      class="jump" 
+      style="position: absolute;
+      top: 148px;
+      color: white;
+      left: 268px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(10deg);
+      -moz-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      -o-transform: rotate(10deg);
+      transform: rotate(10deg);"
+      title=""/>
+
+<img src="images/xml-tei-gitlab-1a.png"
+      class="jump" 
+      style="position: absolute;
+      top: 145px;
+      color: white;
+      left: 70px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      transform: rotate(-5deg);"
+      title=""/> 
+
+
+???
+
+FAIR
+
+* Findable
+* Accessible
+* Interoperable
+* Reusable
+
+
+---
+
+## Von den Daten zur Plattform
+
+<div id="haller1" class="gallery" style="position: absolute; left:50px; top: 150px; width:400px; background-color: white; padding: 5px; overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;">
+  <a href="images/Sketch-201705L.png" title="Entwurf Mai 2017">
+    <img src="images/Sketch-201705.png" width="320px;" />
+  </a>
+</div>
+
+<div style="position: absolute; left:420px; top: 200px; font-size: 10em;">⬀</div>
+<div style="position: absolute; left:420px; top: 350px; font-size: 10em;">⬂</div>
+
+<div id="haller2" class="gallery" style="z-index: 100; position: absolute; left:610px; top: 143px; background-color: black; padding: 5px; overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;">
+  <a href="images/hallerNet-Sammlungen.png" title="Sammlungen auf hallerNet, Mai 2019">
+    <img src="images/hallerNet-Sammlungen.png" width="450px;" />
+  </a>
+</div>
+<div id="haller3" class="gallery" style="position: absolute; left:610px; top: 312px; background-color: black; padding: 5px; overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;">
+  <a href="images/hallerNet-Register.png" title="Register auf hallerNet, Mai 2019">
+    <img src="images/hallerNet-Register.png" width="450px;" />
+  </a>
+</div>
+<div id="haller4" class="gallery" style="position: absolute; left:610px; top: 545px; background-color: black; padding: 5px; overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;">
+  <a href="images/hallerNet-Editionen.png" title="Editionen auf hallerNet, Mai 2019">
+    <img src="images/hallerNet-Editionen.png" width="450px;" />
+  </a>
+</div>
+
+---
+
+name: Schaubild
+background-image: url(images/Schaubild.jpg)
+background-size: contain
+
+???
+
+Im technischen Sinn keine Datenbank.
+
+---
+
+name: Schaubild-2
+background-image: url(images/Schaubild+Bilder.jpg)
+background-size: contain
+
+---
+
+name: chord
+background-image: url(images/chord-unidirectional.png)
+background-size: contain
+
+## Hoher Vernetzungsgrad
+
+---
+
+name: dh19.hallernet.org
+background-image: url(images/hallernet.org-2019.png)
+background-size: contain
+
+## Das Portal
+
+
+<h3><p>Ab sofort online:</p><a href="https://hallernet.org" target="_blank">https://hallernet.org</a></h3>
+
+<!-- Landingpage zeigen: Sammlungen, Editionen, Register -->
+
+---
+
+## Zusammengefasst
+
+<h3>
+  <ul style="color: black;">
+    <li>Datenreichtum dank langjähriger Beforschung und Nutzung eines zentralen Werkzeugs<br/></li>
+    <li>Ausgeprägte Vernetzung, weiter wachsend</li>
+    <li>Daten als <em>first class citizens</em></li>
+  </ul>
+</h3>
+
+
+<!-- 
+
+name: Diskussion
+layout: false
+
+#Vielen Dank für die Aufmerksamkeit
+ -->
+
+---
+
+
+name: Launch
+background-image: url(images/Launch.png)
+background-size: contain
+
+
+
+
+
+    </textarea>
+    
+    <script type="text/javascript">
+    $('#lb1').rebox({ selector: 'a' });
+    </script>
+
+    <!-- <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script> -->
+    <script src="remark/out/remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create(
+            {
+                    // Set the slideshow display ratio
+                    // Default: '4:3'
+                    // Alternatives: '16:9', ...
+                    ratio: '16:9',
+
+                    // Navigation options
+                    navigation: {
+                      // Enable or disable navigating using scroll
+                      // Default: true
+                      // Alternatives: false
+                      scroll: false,
+
+                      // Enable or disable navigation using touch
+                      // Default: true
+                      // Alternatives: false
+                      touch: true,
+
+                      // Enable or disable navigation using click
+                      // Default: false
+                      // Alternatives: true
+                      click: false
+                    },
+
+                    // Customize slide number label, either using a format string..
+                    //slideNumberFormat: 'Slide %current% of %total%',
+                    // .. or by using a format function
+                    //slideNumberFormat: function (current, total) {
+                    //  return 'Slide ' + current + ' of ' + total;
+                    //},
+
+                    // Enable or disable counting of incremental slides in the slide counting
+                    countIncrementalSlides: true
+            });
+    </script>
+
+    <script type="text/javascript">
+      var rect1 = new OpenSeadragon.Rect(0.181, 0, 0.014, 0.014);
+      var viewer1 = OpenSeadragon({
+        id: "seadragon-viewer-excel",
+        prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+        tileSources: "https://images.hallernet.org/iiif/misc/halleronline/persons_excel.tif/info.json",
+      });
+
+      viewer1.addHandler('open', function() {
+            setTimeout(function() {
+                viewer1.viewport.fitBounds(rect1);
+            }, 1);
+        });
+    </script>
+
+    <script type="text/javascript">
+      var rect2 = new OpenSeadragon.Rect(0, 0, 0.5, 1);
+      var viewer2 = OpenSeadragon({
+        id: "seadragon-viewer-faust",
+        prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+        tileSources: "https://images.hallernet.org/iiif/misc/halleronline/persons_faust.tif/info.json"
+      });
+      viewer2.addHandler('open', function() {
+            setTimeout(function() {
+                viewer2.viewport.fitBounds(rect2);
+            }, 1);
+        });
+    </script>
+
+
+
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('#haller1').rebox(
+          {
+            theme: 'rebox',        // class name parent gets (for your css)
+            selector: 'a',        // the selector to delegate to, should be to the <a> which contains an <img>
+            prev: '&lt;',        // use an image, text, whatever for the previous button
+            next: '&gt;',        // use an image, text, whatever for the next button
+            loading: '%',          // use an image, text, whatever for the loading notification
+            //close: '&times;',      // use an image, text, whatever for the close button
+            //speed: 600,            // speed to fade in or out
+            //zIndex: 1000,          // zIndex to apply to the outer container
+            //cycle: true,           // whether to cycle through galleries or stop at ends
+            //captionAttr: 'title'   // name of the attribute to grab the caption from
+            //template: 'image',     // the default template to be used (see templates below)
+            //templates: {           // define templates to create the elements you need function($item, settings)
+             //   image: function($item, settings, callback){ 
+             //       return $('<img src="'+ $item.attr('href') +'" class="'+ s.theme +'-content" />').load(callback);
+             //       }
+             //   }
+            }
+
+          );
+        $('#haller2').rebox(
+          {
+            theme: 'rebox',        // class name parent gets (for your css)
+            selector: 'a',        // the selector to delegate to, should be to the <a> which contains an <img>
+            prev: '&lt;',        // use an image, text, whatever for the previous button
+            next: '&gt;',        // use an image, text, whatever for the next button
+            loading: '%',          // use an image, text, whatever for the loading notification
+            //close: '&times;',      // use an image, text, whatever for the close button
+            //speed: 600,            // speed to fade in or out
+            //zIndex: 1000,          // zIndex to apply to the outer container
+            //cycle: true,           // whether to cycle through galleries or stop at ends
+            //captionAttr: 'title'   // name of the attribute to grab the caption from
+            //template: 'image',     // the default template to be used (see templates below)
+            //templates: {           // define templates to create the elements you need function($item, settings)
+             //   image: function($item, settings, callback){ 
+             //       return $('<img src="'+ $item.attr('href') +'" class="'+ s.theme +'-content" />').load(callback);
+             //       }
+             //   }
+            }
+
+          );
+        $('#haller3').rebox(
+          {
+            theme: 'rebox',        // class name parent gets (for your css)
+            selector: 'a',        // the selector to delegate to, should be to the <a> which contains an <img>
+            prev: '&lt;',        // use an image, text, whatever for the previous button
+            next: '&gt;',        // use an image, text, whatever for the next button
+            loading: '%',          // use an image, text, whatever for the loading notification
+            //close: '&times;',      // use an image, text, whatever for the close button
+            //speed: 600,            // speed to fade in or out
+            //zIndex: 1000,          // zIndex to apply to the outer container
+            //cycle: true,           // whether to cycle through galleries or stop at ends
+            //captionAttr: 'title'   // name of the attribute to grab the caption from
+            //template: 'image',     // the default template to be used (see templates below)
+            //templates: {           // define templates to create the elements you need function($item, settings)
+             //   image: function($item, settings, callback){ 
+             //       return $('<img src="'+ $item.attr('href') +'" class="'+ s.theme +'-content" />').load(callback);
+             //       }
+             //   }
+            }
+
+          );
+        $('#haller4').rebox(
+          {
+            theme: 'rebox',        // class name parent gets (for your css)
+            selector: 'a',        // the selector to delegate to, should be to the <a> which contains an <img>
+            prev: '&lt;',        // use an image, text, whatever for the previous button
+            next: '&gt;',        // use an image, text, whatever for the next button
+            loading: '%',          // use an image, text, whatever for the loading notification
+            //close: '&times;',      // use an image, text, whatever for the close button
+            //speed: 600,            // speed to fade in or out
+            //zIndex: 1000,          // zIndex to apply to the outer container
+            //cycle: true,           // whether to cycle through galleries or stop at ends
+            //captionAttr: 'title'   // name of the attribute to grab the caption from
+            //template: 'image',     // the default template to be used (see templates below)
+            //templates: {           // define templates to create the elements you need function($item, settings)
+             //   image: function($item, settings, callback){ 
+             //       return $('<img src="'+ $item.attr('href') +'" class="'+ s.theme +'-content" />').load(callback);
+             //       }
+             //   }
+            }
+
+          );
+      });
+    </script>
+
+  </body>
+</html>

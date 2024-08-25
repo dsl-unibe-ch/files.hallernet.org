@@ -1,0 +1,518 @@
+<!--<!DOCTYPE html>-->
+<html>
+  <head>
+    <title>Vom Stellenkommentar zum Netzwerk und zurück: grosse Quellenkorpora und tief erschlossene Strukturdaten auf hallerNet</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="css/fonts.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="vendor/jQuery-Rebox-master/jquery-rebox.css">
+    <script type="text/javascript" src="vendor/jQuery-Rebox-master/lib/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="lib/zepto.min.js"></script> -->
+    <script type="text/javascript" src="vendor/jQuery-Rebox-master/lib/jquery-litelighter.js"></script>
+    <script type="text/javascript" src="vendor/jQuery-Rebox-master/jquery-rebox.js"></script>
+
+    <script type="text/javascript" src="vendor/openseadragon/openseadragon.min.js"></script>
+
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+      @import url(https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,400italic,700italic);
+      @import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+      body { font-family: 'Calibri'; }
+      h1 {
+        font-family: 'Calibri-Bold';
+        font-weight: bold;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        bottom: 50px;
+        z-index: 99;
+      }
+      h2 {
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: #939309;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        top: 40px;
+        z-index: 50;
+      }
+
+      h3, h4 {
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: lightgray;
+        background:rgba(255,255,255,.8);
+        padding: 15px 15px;
+        position: absolute;
+        bottom: 140px;
+      }
+
+      .contentarea {
+        position: absolute;
+        top: 180px;
+        font-size: 30px;
+        width: 80vw;
+        font-family: 'Calibri';
+        /*font-weight: bold;*/
+        color: darkgray;
+      }
+
+      .vw50 {
+        width: 50vw;
+      }
+
+      .vw50a {
+        color: white;
+        position: absolute;
+        left: 55%;
+        width: 38vw;
+        z-index: 40;
+      }
+
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; 
+      font-size:13px;}
+      
+      a:link, a:visited {
+      color: black;
+      text-decoration: none;
+      }
+
+      .jump:hover
+      {
+      z-index:100 !important;
+      }
+
+      .rebox {
+        /*background-color: black; */
+        padding: 5px;
+        color: white;
+      }
+
+      .rebox-caption p {
+        font-size: 20px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <textarea id="source">
+
+name: Titelseite
+class: 
+
+## Vom Stellenkommentar zum Netzwerk und zurück:<br/> grosse Quellenkorpora und tief erschlossene<br/> Strukturdaten auf *hallerNet*
+
+<img style="position: absolute; bottom:180px; left: 0px; opacity: 1; z-index: 0; width: 100%;" src="images/haller.jpg"/>
+
+<div style="position: absolute; top: 520px; left: 100px;"><p>Peter Dängeli, Cologne Center for eHumanities</p><p>Martin Stuber, Universität Bern, Historisches Institut</p><p>Christian Forney, Universität Bern, Historisches Institut</p></div>
+
+<div style="position: absolute; top: 520px; right: 200px; text-align: right;"><p><em>DHd 2019</em></p><p>Frankfurt/Mainz, 27.-29. März 2019</p></div>
+
+--
+
+<div style="position: absolute; top: 550px; left: 30px;"><h3 style="background:rgba(0,0,0,0);">Datentransformation<!-- Transformierte Datengrundlage --></h3></div>
+<div style="position: absolute; top: 650px; left: 30px;"><h3 style="background:rgba(0,0,0,0);">Generierung von Forschungsdaten<!-- Analysepotenziale --></h3></div>
+
+
+---
+
+## Spuren der Forschung...
+
+<div id="haller1" class="gallery" style="position: absolute; left:-50px; top: 220px; background-color: black; padding: 5px; overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;">
+  <a href="images/Buch_FormationeCordis.png" title="Monti: Commentarius de formatione cordis in ovo incubato (2000)">
+    <img src="images/Buch_FormationeCordis.png" width="170px;" />
+  </a>
+  <a href="images/Buch_Repertorium.png" title="Boschung et al.: Repertorium zu
+Albrecht von Hallers Korrespondenz 1724–1777 (2002)">
+    <img src="images/Buch_Repertorium.png" width="180px;" />
+  </a>
+  <a href="images/Buch_Bibliographia.png" title="Steinke, Profos: Bibliographia Halleriana (2004)">
+    <img src="images/Buch_Bibliographia.png" width="180px;" />
+  </a>
+  <a href="images/Buch_HallersNetz.png" title="Stuber, Hächler, Lienhard: Hallers Netz (2005)">
+    <img src="images/Buch_HallersNetz.png" width="200px;" />
+  </a>
+  <a href="images/Buch_GelehrteKritik.jpg" title="">
+    <img src="images/Buch_GelehrteKritik.jpg" width="170px;" />
+  </a>
+  <a href="images/Buch_HallerWerlhof.png" title="Sonntag: Paul Gottlieb Werlhof’s Letters
+to Albrecht von Haller (2014)">
+    <img src="images/Buch_HallerWerlhof.png" width="170px;" />
+  </a>
+  <a href="images/Buch_LebenWerkEpoche.jpg" title="Steinke: Albrecht von Haller: Leben - Werk - Epoche (2008)">
+    <img src="images/Buch_LebenWerkEpoche.jpg" width="170px;" />
+  </a>
+
+</div>
+
+---
+
+name: False Faust
+background-image: url(images/falsefaust.png)
+background-size: 100%
+
+## ... und was sie ermöglicht hat
+
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p>Johann Wolfgang Goethe: Faust. Historisch-kritische Edition. Herausgegeben von Anne Bohnenkamp, Silke Henke und Fotis Jannidis unter Mitarbeit von Gerrit Brüning, Katrin Henzel, Christoph Leijser, Gregor Middell, Dietmar Pravida, Thorsten Vitt und Moritz Wissenbach. Version 1.1 RC. Frankfurt am Main / Weimar / Würzburg 2018, A, S. 9, URL: http://v1-1.faustedition.net/document?sigil=A&page=9&view=facsimile, abgerufen am 28.3.2019.</p>
+
+---
+
+## Faust Professional
+
+<div id="seadragon-viewer-faust" style="width:100%; height:600px;"></div>
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p><a href="https://images.hallernet.org/iiif/misc/halleronline/persons_excel.tif/full/pct:10/0/default.jpg" target="_blank">https://images.hallernet.org/iiif/misc/halleronline/persons_excel.tif/full/pct:10/0/default.jpg</a></p></div>
+
+---
+
+## Excel to the rescue
+
+<div id="seadragon-viewer-excel" style="width:100%; height:600px;"></div>
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p><a href="https://images.hallernet.org/iiif/misc/halleronline/persons_faust.tif/full/pct:10/0/default.jpg" target="_blank">https://images.hallernet.org/iiif/misc/halleronline/persons_faust.tif/full/pct:10/0/default.jpg</a></p></div>
+
+---
+
+## Ins Zielformat mit XProc
+
+
+<img src="images/xml-tei-gitlab-4.png"
+      class="jump" 
+      style="position: absolute;
+      top: 148px;
+      color: white;
+      left: 568px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(3deg);
+      -moz-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+      -o-transform: rotate(3deg);
+      transform: rotate(3deg);"
+      title=""/> 
+
+<img src="images/xml-tei-gitlab-3.png"
+      class="jump" 
+      style="position: absolute;
+      top: 108px;
+      color: white;
+      left: 368px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(-15deg);
+      -moz-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+      -o-transform: rotate(-15deg);
+      transform: rotate(-15deg);"
+      title=""/>      
+
+<img src="images/xml-tei-gitlab-2.png"
+      class="jump" 
+      style="position: absolute;
+      top: 148px;
+      color: white;
+      left: 268px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(10deg);
+      -moz-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      -o-transform: rotate(10deg);
+      transform: rotate(10deg);"
+      title=""/>
+
+<img src="images/xml-tei-gitlab-1.png"
+      class="jump" 
+      style="position: absolute;
+      top: 145px;
+      color: white;
+      left: 70px;
+      width: 800px;
+      /*box-shadow: 1px 1px 5px #888888;*/
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+      -o-transform: rotate(-5deg);
+      transform: rotate(-5deg);"
+      title=""/> 
+
+
+
+---
+
+name: chord
+background-image: url(images/chord-unidirectional.png)
+background-size: contain
+
+## Hoher Vernetzungsgrad
+
+---
+
+name: dh19.hallernet.org
+background-image: url(images/dhd19.hallernet.org.png)
+background-size: contain
+
+## Das Portal
+
+
+<h3><p>Vorschau:</p><a href="http://dhd19.hallernet.org" target="_blank">http://dhd19.hallernet.org</a></h3>
+
+<!-- Landingpage zeigen: Sammlungen, Editionen, Register -->
+
+---
+
+## Zusammengefasst
+
+<h3>
+  <ul>
+    <li>Datenreichtum dank langjähriger Beforschung und Nutzung eines zentralen Werkzeugs<br/></li>
+    <li>Vernetzung bereits sehr ausgeprägt</li>
+    <li>Daten als <em>first class citizens</em></li>
+  </ul>
+</h3>
+
+---
+
+name: MS01
+background-image: url(images/ms01.jpg)
+background-size: contain
+
+---
+
+name: MS02
+background-image: url(images/ms02.jpg)
+background-size: contain
+
+---
+
+name: MS03
+background-image: url(images/ms03.jpg)
+background-size: contain
+
+---
+
+name: MS04
+background-image: url(images/ms04.jpg)
+background-size: contain
+
+---
+
+name: MS05
+background-image: url(images/ms05.jpg)
+background-size: contain
+
+---
+
+name: MS06
+background-image: url(images/ms06.jpg)
+background-size: contain
+
+<!--
+-/-/-
+
+## Soziale Positionen 
+
+
+<br/><br/><br/><br/><br/><br/><br/>
+```xml
+  <note type="korres_position" n="sn_16.113.000" hal:desc="korres_zeile_stellung_position">
+      <term n="sn_16.113.100" cRef="#tax_16.113.000_student"/>
+      <date type="analytical" n="sn_16.113.200" from="1709" to="1711"/>
+      <date type="from" n="sn_16.113.210" from="1709">
+         <note type="evidence"/>
+      </date>
+      <date type="to" n="sn_16.113.220" to="1711">
+         <note type="evidence"/>
+      </date>
+   </note>
+   <note type="korres_position" n="sn_16.113.000" hal:desc="korres_zeile_stellung_position">
+      <term n="sn_16.113.100" cRef="#tax_16.113.000_arzt"/>
+      <date type="analytical" n="sn_16.113.200" from="1715" to="1760"/>
+      <date type="from" n="sn_16.113.210" notAfter="1715" notBefore="1711">
+         <note type="evidence"/>
+      </date>
+      <date type="to" n="sn_16.113.220" notBefore="1750" notAfter="1760" cert="low">
+         <note type="evidence">Position wohl bis zum Tod inne gehabt. </note>
+      </date>
+   </note>
+  ```
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p>https://gitlab.cceh.uni-koeln.de/haller-online/brn/data.hallernet/blob/master/persons/004/person_00478.xml</p>
+
+-/-/-
+name: oXygen 1
+background-image: url(images/oxygen-author-position.png)
+background-size: contain
+
+-/-/-
+
+## Wirkungsorte
+
+<br/><br/><br/><br/><br/><br/><br/>
+```xml
+  <note n="sn_16.041.000" hal:desc="korres_verbund_wirkungsorte">
+      <ref n="sn_16.041.100" target="place_00718">Leiden</ref>
+      <date type="analytical" n="sn_16.041.200" from="1709" to="1711"/>
+      <date type="from" n="sn_16.041.210" from="1709">
+         <note type="evidence"/>
+      </date>
+      <date type="to" n="sn_16.041.220" to="1711">
+         <note type="evidence"/>
+      </date>
+      <desc n="sn_16.041.300"/>
+   </note>
+   <note n="sn_16.041.000" hal:desc="korres_verbund_wirkungsorte">
+      <ref n="sn_16.041.100" target="place_00603">Hannover</ref>
+      <date type="analytical" n="sn_16.041.200" from="1715" to="1760"/>
+      <date type="from" n="sn_16.041.210" from="1715">
+         <note type="evidence"/>
+      </date>
+      <date type="to" n="sn_16.041.220" notAfter="1760">
+         <note type="evidence">Wirkungsort wohl bis zum Tod</note>
+      </date>
+      <desc n="sn_16.041.300"/>
+   </note>
+```
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p>https://gitlab.cceh.uni-koeln.de/haller-online/brn/data.hallernet/blob/master/persons/004/person_00478.xml</p>
+
+-/-/-
+name: oXygen 2
+background-image: url(images/oxygen-author-wirkungsort.png)
+background-size: contain
+
+-/-/-
+
+## Soziale Positionen
+
+
+<br/><br/><br/><br/><br/><br/><br/>
+<img src="images/positions.svg"/>
+
+<div style="position: absolute; top: 550px; width: 90%; opacity: 0.2;"><p><a href="https://observablehq.com/d/71b8979eafe349d9" target="_blank">https://observablehq.com/d/71b8979eafe349d9</a></p></div>
+-->
+
+<!-- 
+
+name: Diskussion
+layout: false
+
+#Vielen Dank für die Aufmerksamkeit
+ -->
+
+    </textarea>
+    
+    <script type="text/javascript">
+    $('#lb1').rebox({ selector: 'a' });
+    </script>
+
+    <!-- <script src="http://gnab.github.io/remark/downloads/remark-latest.min.js" type="text/javascript"></script> -->
+    <script src="remark/out/remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create(
+            {
+                    // Set the slideshow display ratio
+                    // Default: '4:3'
+                    // Alternatives: '16:9', ...
+                    ratio: '16:9',
+
+                    // Navigation options
+                    navigation: {
+                      // Enable or disable navigating using scroll
+                      // Default: true
+                      // Alternatives: false
+                      scroll: false,
+
+                      // Enable or disable navigation using touch
+                      // Default: true
+                      // Alternatives: false
+                      touch: true,
+
+                      // Enable or disable navigation using click
+                      // Default: false
+                      // Alternatives: true
+                      click: false
+                    },
+
+                    // Customize slide number label, either using a format string..
+                    //slideNumberFormat: 'Slide %current% of %total%',
+                    // .. or by using a format function
+                    //slideNumberFormat: function (current, total) {
+                    //  return 'Slide ' + current + ' of ' + total;
+                    //},
+
+                    // Enable or disable counting of incremental slides in the slide counting
+                    countIncrementalSlides: true
+            });
+    </script>
+
+    <script type="text/javascript">
+      var rect = new OpenSeadragon.Rect(0, 0, 10, 10);
+      var viewer = OpenSeadragon({
+        id: "seadragon-viewer-excel",
+        prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+        tileSources: "https://images.hallernet.org/iiif/misc/halleronline/persons_excel.tif/info.json",
+      });
+
+      viewer.addHandler('open', function() {
+            setTimeout(function() {
+                viewer.viewport.fitBounds(rect);
+            }, 1);
+        });
+    </script>
+
+    <script type="text/javascript">
+      var rect = new OpenSeadragon.Rect(0, 0, 0.5, 1);
+      var viewer = OpenSeadragon({
+        id: "seadragon-viewer-faust",
+        prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+        tileSources: "https://images.hallernet.org/iiif/misc/halleronline/persons_faust.tif/info.json"
+      });
+      viewer.addHandler('open', function() {
+            setTimeout(function() {
+                viewer.viewport.fitBounds(rect);
+            }, 1);
+        });
+    </script>
+
+
+
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('#haller1').rebox(
+          {
+            theme: 'rebox',        // class name parent gets (for your css)
+            selector: 'a',        // the selector to delegate to, should be to the <a> which contains an <img>
+            prev: '&lt;',        // use an image, text, whatever for the previous button
+            next: '&gt;',        // use an image, text, whatever for the next button
+            loading: '%',          // use an image, text, whatever for the loading notification
+            //close: '&times;',      // use an image, text, whatever for the close button
+            //speed: 600,            // speed to fade in or out
+            //zIndex: 1000,          // zIndex to apply to the outer container
+            //cycle: true,           // whether to cycle through galleries or stop at ends
+            //captionAttr: 'title'   // name of the attribute to grab the caption from
+            //template: 'image',     // the default template to be used (see templates below)
+            //templates: {           // define templates to create the elements you need function($item, settings)
+             //   image: function($item, settings, callback){ 
+             //       return $('<img src="'+ $item.attr('href') +'" class="'+ s.theme +'-content" />').load(callback);
+             //       }
+             //   }
+            }
+
+          );
+
+      });
+    </script>
+
+  </body>
+</html>
