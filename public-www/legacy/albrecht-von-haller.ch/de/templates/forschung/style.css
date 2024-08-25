@@ -1,0 +1,11 @@
+@import url("../css/reset.css");
+@import url("../css/basis.css");
+
+body, #footer, .ui-tabs-selected a, .ui-tabs-nav a:hover {
+	background-color: #c88a33;
+}
+
+#contenttitel {
+	color: #cd8e35;	
+}
+

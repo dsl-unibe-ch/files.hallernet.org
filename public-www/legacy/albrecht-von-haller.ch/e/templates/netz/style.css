@@ -1,0 +1,93 @@
+@import url("../css/reset.css");
+@import url("../css/basis.css");
+
+/* @group Tabs nicht versteckt */
+
+#mytabs {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 600px;
+	/*background-color: #ededed;*/
+	display: block;
+	padding-bottom: 30px;
+}
+
+#mytabs ul {
+	padding: 0;
+	list-style: none;
+	display: inline;
+	margin-right: 0;
+	margin-top: 0;
+	margin-left: 0;
+}
+
+#mytabs li {
+	margin-right: 25px;
+	width: 95px;
+	height: 55px;
+	background: #dfe1e1 url(../basisdesign/overlay-button.png) repeat-x;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	border-bottom: 1px solid rgba(0,0,0,0.25);	
+	cursor: pointer;
+	margin-top: 0;
+	float: left;
+	display: block;
+	margin-bottom: 25px;
+}
+
+#mytabs li a {
+	display: block;
+	text-decoration: none;
+	padding: 9px 12px 12px;
+	color: #000;
+	font: bold 12px/1.4em "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+#mytabs li a:hover {
+	color: white;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	display: block;
+	background: #b20c59 url(../basisdesign/overlay-button.png) repeat-x;	height: 35px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	border-bottom: 1px solid rgba(0,0,0,0.25);	
+	cursor: pointer;
+}
+
+.ui-tabs-panel {
+	clear: left;
+	width: 575px;
+	margin-top: 25px;
+}
+
+
+/* @end */
+
+body, #footer, /*.ui-tabs-selected a,*/ .ui-tabs-nav a:hover {
+	background-color: #b20c59;
+}
+
+#contenttitel {
+	color: #b72b66;
+	opacity: 1;
+}
+
+
+
+#content p a[name] {
+	text-decoration: none ! important;
+	color: #424242;
+	font-weight: bold;
+}
+
+#content p a[href^="http:"] {
+	/*color: black ! important;*/ 
+	text-decoration: underline ! important;
+	color: #424242;
+	font-weight: bold;
+}

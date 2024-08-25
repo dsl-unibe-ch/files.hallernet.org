@@ -1,0 +1,16 @@
+@import url("../css/reset.css");
+@import url("../css/basis.css");
+
+body, #footer, .ui-tabs-selected a, .ui-tabs-nav a:hover {
+	background-color: #614a5a;
+}
+
+#contenttitel {
+	color: #6d4a63;	
+}
+
+#meta {
+	/*background: url(design/gelb-bg.png) repeat;*/
+	/*background-color: #fff;*/
+	/*opacity: 0.9;*/
+}
