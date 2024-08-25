@@ -1,0 +1,14 @@
+@import url("../css/reset.css");
+@import url("../css/basis.css");
+
+body, #footer, .ui-tabs-selected a, .ui-tabs-nav a:hover, .button, .button:visited {
+	background-color: #60636b;
+}
+
+#contenttitel {
+	color: #787d86;	
+}
+
+.QTP .playContainer .playButton {
+	font: bold 13px Arial, Helvetica, Geneva, sans-serif;
+}

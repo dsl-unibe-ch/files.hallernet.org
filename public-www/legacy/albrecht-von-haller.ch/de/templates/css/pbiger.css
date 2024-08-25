@@ -1,0 +1,19 @@
+#content p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+    margin-bottom: 1.2em;
+	font-size: 1.8em;
+	line-height: 160%;
+	color: #424242;
+}
+
+/*#content ul {
+	margin-bottom: 1em;
+}
+#content li {
+	list-style-position: inside;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.8em;
+	color: #424242;
+	padding-left: 0;
+	margin-bottom: 0;
+}*/
