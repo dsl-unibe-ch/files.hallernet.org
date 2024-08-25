@@ -15,7 +15,7 @@ jobs:
         uses: montudor/action-zip@v0.1.0
 
       - name: Zip output
-        run: zip -qq -r media.zip media
+        run: zip -qq -r medien.zip medien
         working-directory: public-www/legacy/albrecht-von-haller.ch
 
       - name: Generate Directory Listings
