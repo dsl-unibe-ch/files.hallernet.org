@@ -23,6 +23,9 @@ jobs:
         with:
           FOLDER: public-www      #directory to generate index
 
+      - name: Rename php files to html
+        run: find public-www/legacy/albrecht-von-haller.ch -type f -name '*.php' -execdir mv {} {}.html ';'
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
