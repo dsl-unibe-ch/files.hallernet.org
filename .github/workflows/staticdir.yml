@@ -7,7 +7,7 @@ jobs:
     name: Directory Listings Index
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: main    #checkout different branch
 
@@ -27,7 +27,7 @@ jobs:
         run: find public-www/legacy/albrecht-von-haller.ch -type f -name '*.php' -execdir mv {} {}.html ';'
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: 'public-www'      # upload generated folder
 
@@ -47,4 +47,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
