@@ -1,0 +1,1 @@
+# Please refer to [https://docs.hallernet.org/guidelines/](https://docs.hallernet.org/guidelines/) for current documentation.
